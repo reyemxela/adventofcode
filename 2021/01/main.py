@@ -15,20 +15,16 @@ def debug(s=''):
 
 
 def step1(inp):
-  prev = inp[0]
   count = 0
-  for cur in inp[1:]:
-    count += int(cur > prev)
-    prev = cur
+  for i in range(len(inp)-1):
+    count += int(inp[i] < inp[i+1])
   return count
 
 def step2(inp):
   count = 0
-  prev = sum(inp[0:3])
-  for i in range(1, len(inp)):
+  for i in range(len(inp)-3):
     cur = sum(inp[i:i+3])
-    count += int(cur > prev)
-    prev = cur
+    count += int(sum(inp[i:i+3]) < sum(inp[i+1:i+4]))
   return count
 
 
