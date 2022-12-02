@@ -1,6 +1,6 @@
 #!/bin/bash
 
-SESSION=`cat ~/.config/secrets/aoc_session |tr -d '\n'`
+SESSION=$(secret aoc_session TOKEN)
 
 MAINDIR=$(dirname $(readlink -f "$0"))
 
