@@ -1,11 +1,11 @@
 
 
 
-def part1(input):
+def part1(inp):
   pass
 
 
-def part2(input):
+def part2(inp):
   pass
 
 
